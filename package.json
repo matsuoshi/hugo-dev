@@ -1,0 +1,27 @@
+{
+  "name": "hugo-dev",
+  "description": "hugo develop set with postcss + ES2016",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "matsuoshi@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.9.0",
+    "postcss-import": "^9.0.0",
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "start": "yarn run watch",
+    "build": "yarn run build:css && yarn run:build:js && yarn run build:hugo",
+    "build:css": "postcss -c .postcssrc.json",
+    "build:js": "webpack",
+    "build:hugo": "hugo",
+    "watch": "yarn run watch:css & yarn run:watch:js & yarn run watch:hugo",
+    "watch:css": "postcss -w -c .postcssrc.json",
+    "watch:js": "webpack -w",
+    "watch:hugo": "hugo server -w"
+  }
+}
