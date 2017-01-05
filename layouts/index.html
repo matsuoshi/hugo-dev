@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<article>
+  <ul>
+    {{ range (.Paginator).Pages }}
+      {{ .Render "post-list" }}
+    {{ end }}
+  </ul>
+</article>
+
+{{ partial "pagination.html" . }}
+
+{{ partial "footer.html" . }}
