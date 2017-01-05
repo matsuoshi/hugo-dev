@@ -1,7 +1,7 @@
 module.exports = {
-  entry: "./src/js/scripts.js",
+  entry: "./src/scripts/scripts.js",
   output: {
-    path: "static/js",
+    path: "static/assets/js",
     filename: "scripts.js"
   },
   module: {
